@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahanaj Jim (Shahu Noir) — Creator & Storyteller Portfolio</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        pastelBlue: '#D0E8F2',
+                        pastelGreen: '#DDF3E4',
+                        pastelBlueLight: '#E8F4F8',
+                        pastelGreenLight: '#EEF9F1',
+                        creamBg: '#FAFBF7',
+                        cardWhite: '#FFFFFF',
+                        darkText: '#2C4A52',
+                        mutedText: '#5B7B83',
+                        accentBlue: '#639FAB',
+                        accentGreen: '#72B095',
+                        subtleGold: '#E6C594'
+                    },
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                        handwritten: ['"Caveat"', 'cursive']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* CSS Custom Variables for Theme */
+        :root {
+            --pastel-blue: #D0E8F2;
+            --pastel-green: #DDF3E4;
+            --cream-bg: #FAFBF7;
+            --card-bg: #FFFFFF;
+            --text-dark: #2C4A52;
+            --text-muted: #5B7B83;
+            --accent-blue: #639FAB;
+            --accent-green: #72B095;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1F7F4;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #B2D8CD;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #88C4B3;
+        }
+
+        /* Scrapbook Tape Effect */
+        .tape-effect {
+            position: relative;
+        }
+        .tape-effect::before {
+            content: '';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%) rotate(-2deg);
+            width: 90px;
+            height: 26px;
+            background-color: rgba(255, 255, 255, 0.65);
+            border-left: 2px dashed rgba(200, 200, 200, 0.5);
+            border-right: 2px dashed rgba(200, 200, 200, 0.5);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            z-index: 10;
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-8px) rotate(1.5deg); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+        .animate-float-delayed {
+            animation: float 6s ease-in-out 2s infinite;
+        }
+
+        /* Celestial Pulse */
+        @keyframes celestialPulse {
+            0%, 100% { opacity: 0.4; transform: scale(1); }
+            50% { opacity: 0.9; transform: scale(1.15); }
+        }
+        .celestial-sparkle {
+            animation: celestialPulse 3.5s ease-in-out infinite;
+        }
+
+        /* Background Gradient Blobs */
+        .blob-bg {
+            background: radial-gradient(circle at 50% 50%, rgba(208, 232, 242, 0.5) 0%, rgba(221, 243, 228, 0.4) 50%, rgba(250, 251, 247, 0) 100%);
+        }
+
+        /* Lightbox transitions */
+        .lightbox-modal {
+            transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+        }
+        .lightbox-modal.hidden {
+            opacity: 0;
+            pointer-events: none;
+            visibility: hidden;
+        }
+
+        /* Glassmorphism */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+        }
+
+        /* Polaroids */
+        .polaroid {
+            background: white;
+            padding: 12px 12px 24px 12px;
+            box-shadow: 0 10px 25px -5px rgba(44, 74, 82, 0.08), 0 8px 10px -6px rgba(44, 74, 82, 0.04);
+            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .polaroid:hover {
+            transform: translateY(-6px) rotate(0deg) scale(1.02) !important;
+            box-shadow: 0 20px 30px -10px rgba(44, 74, 82, 0.15);
+            z-index: 20;
+        }
+    </style>
+</head>
+<body class="bg-creamBg text-darkText font-sans selection:bg-pastelBlue selection:text-darkText relative overflow-x-hidden">
+
+    <!-- 
+    ====================================================================
+    ==================== EASY CUSTOMIZATION SECTION ====================
+    ====================================================================
+    You can easily update any text, links, or image paths below or inside 
+    the HTML tags directly!
+    
+    1. NAME: Shahanaj Jim (Shahu Noir)
+    2. TITLE: Study & Lifestyle Content Creator / Storyteller
+    3. EMAIL: shahunoir@gmail.com
+    4. SOCIAL LINKS:
+       - Instagram: https://www.instagram.com/shahu.noir/
+       - YouTube: https://youtube/@shahunoirlife
+       - TikTok: https://www.tiktok.com/@shahu.noir
+       - Facebook: https://www.facebook.com/share/19dJL8LTxW/
+    5. FEATURED CONTENT LINKS:
+       - Video 1: Admission Journey Day 01 (Instagram Reel)
+       - Video 2: Realistic Study Vlog (YouTube)
+       - Video 3: Relatable Student Life (TikTok)
+    ====================================================================
+    -->
+
+    <!-- Background Decorative Celestial Elements -->
+    <div class="fixed inset-0 pointer-events-none z-0 overflow-hidden opacity-60">
+        <!-- Floating Stars -->
+        <svg class="absolute top-12 left-[10%] w-6 h-6 text-accentBlue celestial-sparkle" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+        </svg>
+        <svg class="absolute top-1/4 right-[8%] w-8 h-8 text-accentGreen celestial-sparkle" style="animation-delay: 1s;" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+        </svg>
+        <svg class="absolute top-2/3 left-[5%] w-5 h-5 text-subtleGold celestial-sparkle" style="animation-delay: 2s;" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+        </svg>
+        <svg class="absolute bottom-1/4 right-[12%] w-7 h-7 text-accentBlue celestial-sparkle" style="animation-delay: 1.5s;" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12 0L14.59 9.41L24 12L14.59 14.59L12 24L9.41 14.59L0 12L9.41 9.41L12 0Z"/>
+        </svg>
+
+        <!-- Subtle Celestial Moon -->
+        <svg class="absolute top-36 right-[18%] w-16 h-16 text-pastelBlue opacity-40 animate-float" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M12.3 2a10 10 0 0 0 9.7 11.5 10 10 0 1 1-11.5-9.7 9.1 9.1 0 0 0 1.8-1.8z"/>
+        </svg>
+        
+        <!-- Soft Gradient Blobs -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 bg-pastelBlue rounded-full blur-3xl opacity-50"></div>
+        <div class="absolute top-1/3 -right-20 w-96 h-96 bg-pastelGreen rounded-full blur-3xl opacity-40"></div>
+        <div class="absolute bottom-10 left-1/4 w-[500px] h-[500px] bg-pastelBlueLight rounded-full blur-3xl opacity-60"></div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="sticky top-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="glass-card rounded-2xl px-5 py-3 flex items-center justify-between shadow-sm border border-white/80">
+                <!-- Logo / Name -->
+                <a href="#hero" class="flex items-center space-x-2 group">
+                    <span class="text-xl font-serif font-bold tracking-tight text-darkText group-hover:text-accentBlue transition-colors">
+                        Shahu Noir <span class="text-accentGreen">✦</span>
+                    </span>
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <nav class="hidden md:flex items-center space-x-7 text-sm font-medium text-darkText/80">
+                    <a href="#about" class="hover:text-accentBlue transition-colors">About</a>
+                    <a href="#content" class="hover:text-accentBlue transition-colors">Content</a>
+                    <a href="#featured" class="hover:text-accentBlue transition-colors">Work</a>
+                    <a href="#portfolio" class="hover:text-accentBlue transition-colors">Portfolio</a>
+                    <a href="#why-me" class="hover:text-accentBlue transition-colors">Why Me</a>
+                    <a href="#skills" class="hover:text-accentBlue transition-colors">Skills</a>
+                    <a href="#experience" class="hover:text-accentBlue transition-colors">Experience</a>
+                    <a href="#services" class="hover:text-accentBlue transition-colors">Services</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden md:flex items-center space-x-3">
+                    <a href="#contact" class="px-5 py-2.5 rounded-full bg-pastelGreen text-darkText font-medium text-sm hover:bg-accentGreen hover:text-white transition-all duration-300 shadow-sm border border-accentGreen/30 flex items-center gap-1.5">
+                        <span>Let's Talk</span>
+                        <span class="text-xs">✦</span>
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobileMenuBtn" class="md:hidden p-2 rounded-xl bg-pastelBlue/40 text-darkText hover:bg-pastelBlue focus:outline-none" aria-label="Toggle Menu">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path id="menuIcon" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Drawer Menu -->
+        <div id="mobileDrawer" class="hidden md:hidden max-w-7xl mx-auto px-4 pt-2 pb-4">
+            <div class="glass-card rounded-2xl p-5 flex flex-col space-y-3 shadow-lg border border-white">
+                <a href="#about" class="mobile-link px-3 py-2 rounded-lg hover:bg-pastelBlue/30 font-medium">About Me</a>
+                <a href="#content" class="mobile-link px-3 py-2 rounded-lg hover:bg-pastelBlue/30 font-medium">Content Categories</a>
+                <a href="#featured" class="mobile-link px-3 py-2 rounded-lg hover:bg-pastelBlue/30 font-medium">Featured Videos</a>
+                <a href="#portfolio" class="mobile-link px-3 py-2 rounded-lg hover:bg-pastelBlue/30 font-medium">Creative Showcase</a>
+                <a href="#why-me" class="mobile-link px-3 py-2 rounded-lg hover:bg-pastelBlue/30 font-medium">Why Work With Me</a>
+                <a href="#skills" class="mobile-link px-3 py-2 rounded-lg hover:bg-pastelBlue/30 font-medium">Creative Skills</a>
+                <a href="#experience" class="mobile-link px-3 py-2 rounded-lg hover:bg-pastelBlue/30 font-medium">Experience</a>
+                <a href="#services" class="mobile-link px-3 py-2 rounded-lg hover:bg-pastelBlue/30 font-medium">Services</a>
+                <a href="#contact" class="mobile-link px-3 py-2.5 rounded-xl bg-pastelGreen text-center font-semibold text-darkText mt-2">Let's Collaborate ✦</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="relative z-10 space-y-24 md:space-y-32 pt-6 pb-16">
+
+        <!-- HERO SECTION -->
+        <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 md:pt-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+                
+                <!-- Left Column: Creator Identity & Intro -->
+                <div class="lg:col-span-7 space-y-6 order-2 lg:order-1 text-center lg:text-left">
+                    
+                    <!-- Celestial Tag -->
+                    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-pastelGreen/60 text-darkText text-xs sm:text-sm font-medium border border-accentGreen/30 shadow-sm animate-float">
+                        <span>☼ Documenting the real journey</span>
+                        <span class="text-accentBlue">✦</span>
+                    </div>
+
+                    <!-- Main Heading -->
+                    <div class="space-y-2">
+                        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-darkText leading-tight">
+                            Hi, I'm <span class="relative inline-block">
+                                <span class="relative z-10 text-darkText">Shahanaj Jim</span>
+                                <span class="absolute bottom-1 left-0 w-full h-3 bg-pastelGreen/80 -z-0 rounded-sm"></span>
+                            </span>
+                        </h1>
+                        <p class="text-lg sm:text-xl font-medium text-accentBlue font-serif italic">
+                            ( Call me Shahu <span class="not-italic text-sm">♡</span> )
+                        </p>
+                        <p class="text-base sm:text-lg font-semibold text-mutedText tracking-wide uppercase text-xs sm:text-sm">
+                            Study & Lifestyle Content Creator ✦ Storyteller
+                        </p>
+                    </div>
+
+                    <!-- Personal Bio -->
+                    <p class="text-base sm:text-lg text-darkText/90 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-sans">
+                        "I am just a girl turning little moments into stories ♡ writer • student • dreamer documenting life, thoughts & the stories living in my head ✧"
+                    </p>
+
+                    <!-- Key Traits Pills -->
+                    <div class="flex flex-wrap gap-2 justify-center lg:justify-start pt-1">
+                        <span class="px-3 py-1 rounded-full bg-cardWhite border border-pastelBlue text-xs text-mutedText font-medium">#RealisticStudyLife</span>
+                        <span class="px-3 py-1 rounded-full bg-cardWhite border border-pastelGreen text-xs text-mutedText font-medium">#AdmissionJourney</span>
+                        <span class="px-3 py-1 rounded-full bg-cardWhite border border-pastelBlue text-xs text-mutedText font-medium">#AuthenticStorytelling</span>
+                        <span class="px-3 py-1 rounded-full bg-cardWhite border border-pastelGreen text-xs text-mutedText font-medium">#StudentLife</span>
+                    </div>
+
+                    <!-- Social Media Links Quick Bar -->
+                    <div class="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                        <!-- Instagram -->
+                        <a href="https://www.instagram.com/shahu.noir/?__pwa=1#" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-cardWhite hover:bg-pastelBlueLight border border-pastelBlue/80 text-xs sm:text-sm font-medium text-darkText transition-all hover:scale-105 shadow-sm">
+                            <svg class="w-4 h-4 text-pink-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                            </svg>
+                            <span>shahu.noir</span>
+                        </a>
+
+                        <!-- YouTube -->
+                        <a href="https://youtube/@shahunoirlife?si=XOBlMaDoVt8_n7h6" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-cardWhite hover:bg-pastelBlueLight border border-pastelBlue/80 text-xs sm:text-sm font-medium text-darkText transition-all hover:scale-105 shadow-sm">
+                            <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                            </svg>
+                            <span>ShahuNoirlife</span>
+                        </a>
+
+                        <!-- TikTok -->
+                        <a href="https://tiktok.com/@shahu.noir" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-cardWhite hover:bg-pastelBlueLight border border-pastelBlue/80 text-xs sm:text-sm font-medium text-darkText transition-all hover:scale-105 shadow-sm">
+                            <svg class="w-4 h-4 text-darkText" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.29 1.54-1.25 2.52.02.83.42 1.64 1.09 2.11.83.6 1.94.73 2.91.41.97-.31 1.75-1.09 2.05-2.06.22-.72.23-1.48.23-2.23l-.01-14.73z"/>
+                            </svg>
+                            <span>shahu.noir</span>
+                        </a>
+
+                        <!-- Facebook -->
+                        <a href="https://www.facebook.com/share/19dJL8LTxW/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-2 px-4 py-2 rounded-xl bg-cardWhite hover:bg-pastelBlueLight border border-pastelBlue/80 text-xs sm:text-sm font-medium text-darkText transition-all hover:scale-105 shadow-sm">
+                            <svg class="w-4 h-4 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                            </svg>
+                            <span>Shahu Noir</span>
+                        </a>
+                    </div>
+
+                    <!-- Call to Action Buttons -->
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#contact" class="px-8 py-3.5 rounded-2xl bg-pastelGreen text-darkText font-semibold hover:bg-accentGreen hover:text-white transition-all shadow-md hover:shadow-lg text-center flex items-center justify-center gap-2 group">
+                            <span>Let's Collaborate</span>
+                            <span class="group-hover:translate-x-1 transition-transform">✦</span>
+                        </a>
+                        <a href="#featured" class="px-8 py-3.5 rounded-2xl bg-cardWhite text-darkText font-semibold hover:bg-pastelBlue/30 border border-pastelBlue transition-all text-center flex items-center justify-center gap-2">
+                            <span>Explore My Content</span>
+                            <span class="text-xs">↓</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Column: Scrapbook Photo Frame -->
+                <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center">
+                    <div class="relative max-w-sm sm:max-w-md w-full">
+                        
+                        <!-- Floating Celestial Badges -->
+                        <div class="absolute -top-4 -right-2 z-20 bg-cardWhite px-4 py-2 rounded-2xl shadow-lg border border-pastelGreen flex items-center gap-2 animate-float">
+                            <span class="text-base">☾</span>
+                            <span class="text-xs font-semibold text-darkText">Storyteller Vibes</span>
+                        </div>
+
+                        <div class="absolute -bottom-6 -left-4 z-20 bg-cardWhite px-4 py-2 rounded-2xl shadow-lg border border-pastelBlue flex items-center gap-2 animate-float-delayed">
+                            <span class="text-base text-subtleGold">☼</span>
+                            <span class="text-xs font-semibold text-darkText">Realistic Life</span>
+                        </div>
+
+                        <!-- Scalloped / Tape Photo Card -->
+                        <div class="polaroid tape-effect rounded-2xl p-4 bg-white transform rotate-1 transition-transform hover:rotate-0">
+                            <div class="relative overflow-hidden rounded-xl aspect-[4/5] bg-pastelBlue/30">
+                                <!-- Main Shahu Noir Profile Image Placeholder -->
+                                <img src="https://placehold.co/600x750/D0E8F2/2C4A52?text=Shahu+Noir+Photo" 
+                                     alt="Shahanaj Jim (Shahu Noir)" 
+                                     id="heroProfilePhoto"
+                                     class="w-full h-full object-cover rounded-xl transition-transform duration-500 hover:scale-105"
+                                     onerror="this.onerror=null; this.src='https://placehold.co/600x750/D0E8F2/2C4A52?text=Shahanaj+Jim';">
+                                
+                                <div class="absolute inset-0 bg-gradient-to-t from-darkText/30 via-transparent to-transparent"></div>
+                            </div>
+                            <div class="mt-4 text-center">
+                                <p class="font-handwritten text-2xl text-darkText font-bold">Shahanaj Jim ✦ Shahu Noir</p>
+                                <p class="text-xs text-mutedText font-medium">Digital Creator & Student</p>
+                            </div>
+                        </div>
+
+                        <!-- Decorative Background Accents -->
+                        <div class="absolute -bottom-4 -right-4 w-full h-full border-2 border-dashed border-accentBlue/40 rounded-2xl -z-10 transform rotate-3"></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Subtle Scroll Indicator -->
+            <div class="flex justify-center pt-12 md:pt-16">
+                <a href="#about" class="flex flex-col items-center gap-1 text-xs text-mutedText hover:text-accentBlue transition-colors animate-bounce">
+                    <span>Scroll to explore my universe</span>
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- ABOUT ME SECTION -->
+        <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-10">
+                <!-- Section Header -->
+                <div class="text-center space-y-2">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pastelBlue/50 text-darkText text-xs font-semibold uppercase tracking-wider">
+                        <span>✦ My Story</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">About My Digital Universe</h2>
+                    <p class="text-mutedText max-w-xl mx-auto text-sm sm:text-base">Documenting life beyond filters and perfection.</p>
+                </div>
+
+                <!-- Scrapbook Layout Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-6 items-stretch">
+                    
+                    <!-- Quote Box (Main Anchor) -->
+                    <div class="md:col-span-12 lg:col-span-7 bg-pastelGreen/30 rounded-3xl p-6 sm:p-10 border border-pastelGreen/80 relative overflow-hidden flex flex-col justify-between shadow-sm">
+                        <div class="absolute top-4 right-6 text-4xl text-accentGreen opacity-30 font-serif">“</div>
+                        <div class="space-y-4 relative z-10">
+                            <span class="px-3 py-1 rounded-full bg-cardWhite text-xs font-semibold text-darkText border border-accentGreen/30">Philosophy</span>
+                            <blockquote class="text-2xl sm:text-3xl font-serif font-semibold text-darkText leading-snug pt-2">
+                                "I don't create a perfect version of student life. I document the real one."
+                            </blockquote>
+                            <p class="text-mutedText text-sm sm:text-base leading-relaxed pt-2">
+                                I am a student and content creator documenting my journey through university admissions, study routines, everyday personal growth, and storytelling. I create content because I love preserving authentic moments and sharing tools that are genuinely useful.
+                            </p>
+                        </div>
+
+                        <!-- Mini Journal Footer Tag -->
+                        <div class="pt-6 flex items-center justify-between border-t border-accentGreen/20 mt-6">
+                            <span class="font-handwritten text-xl text-darkText">~ Shahu Noir</span>
+                            <span class="text-xs text-mutedText font-medium">Real Journey ✦ Authentic Growth</span>
+                        </div>
+                    </div>
+
+                    <!-- Side Floating Card 1: What I Document -->
+                    <div class="md:col-span-6 lg:col-span-5 bg-cardWhite rounded-3xl p-6 sm:p-8 border border-pastelBlue/60 shadow-sm flex flex-col justify-between relative">
+                        <div class="space-y-4">
+                            <div class="w-10 h-10 rounded-2xl bg-pastelBlue/50 flex items-center justify-center text-accentBlue font-bold text-lg">
+                                📚
+                            </div>
+                            <h3 class="text-xl font-serif font-bold text-darkText">The Student Journey</h3>
+                            <p class="text-mutedText text-sm leading-relaxed">
+                                Documenting realistic study life, university admission preparation, late-night practice sessions, and the honest struggles that come with academic growth.
+                            </p>
+                        </div>
+                        <div class="pt-4 flex items-center gap-2 text-xs font-semibold text-accentBlue">
+                            <span>✦ Admissions & Studies</span>
+                        </div>
+                    </div>
+
+                    <!-- Bottom Floating Card 2: Storytelling & Thoughts -->
+                    <div class="md:col-span-6 lg:col-span-6 bg-cardWhite rounded-3xl p-6 sm:p-8 border border-pastelGreen/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-2xl bg-pastelGreen/50 flex items-center justify-center text-accentGreen font-bold text-lg">
+                            ✍
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-darkText">Creative Storytelling</h3>
+                        <p class="text-mutedText text-sm leading-relaxed">
+                            Writing stories, sharing observations, and turning daily observations into narrative content that resonates with young minds and dreamers.
+                        </p>
+                    </div>
+
+                    <!-- Bottom Floating Card 3: Everyday Life -->
+                    <div class="md:col-span-12 lg:col-span-6 bg-pastelBlue/20 rounded-3xl p-6 sm:p-8 border border-pastelBlue/50 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-2xl bg-cardWhite flex items-center justify-center text-subtleGold font-bold text-lg">
+                            ☁
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-darkText">Everyday Moments</h3>
+                        <p class="text-mutedText text-sm leading-relaxed">
+                            Personal updates, small wins, routine snippets, and relatable lifestyle content without the pressure of artificial perfection.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTENT CATEGORIES SECTION -->
+        <section id="content" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-10">
+                <!-- Header -->
+                <div class="text-center space-y-2">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pastelGreen/50 text-darkText text-xs font-semibold uppercase tracking-wider">
+                        <span>✦ What I Create</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">Content Pillars</h2>
+                    <p class="text-mutedText max-w-xl mx-auto text-sm sm:text-base">Carefully crafted content designed for connection and authenticity.</p>
+                </div>
+
+                <!-- 5 Interactive Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Card 1: Study Content -->
+                    <div class="group bg-cardWhite rounded-3xl p-6 border border-pastelBlue/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-pastelBlue/60 flex items-center justify-center text-xl text-darkText group-hover:scale-110 transition-transform">
+                            📖
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-darkText">Study Content</h3>
+                        <p class="text-mutedText text-sm leading-relaxed">
+                            Study routines, study tips, admission preparation, question-bank practice, productivity tools, and realistic study sessions.
+                        </p>
+                        <div class="pt-2 flex flex-wrap gap-1.5">
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelBlue/30 text-[11px] font-medium text-darkText">Study Vlogs</span>
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelBlue/30 text-[11px] font-medium text-darkText">Question Banks</span>
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelBlue/30 text-[11px] font-medium text-darkText">Admissions</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 2: Student Life -->
+                    <div class="group bg-cardWhite rounded-3xl p-6 border border-pastelGreen/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-pastelGreen/60 flex items-center justify-center text-xl text-darkText group-hover:scale-110 transition-transform">
+                            🎓
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-darkText">Student Life</h3>
+                        <p class="text-mutedText text-sm leading-relaxed">
+                            Day-in-my-life vlogs, admission struggles, routines, small wins, campus experiences, and relatable student content.
+                        </p>
+                        <div class="pt-2 flex flex-wrap gap-1.5">
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelGreen/30 text-[11px] font-medium text-darkText">Day-In-Life</span>
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelGreen/30 text-[11px] font-medium text-darkText">Student Struggles</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 3: Lifestyle -->
+                    <div class="group bg-cardWhite rounded-3xl p-6 border border-pastelBlue/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-pastelBlue/60 flex items-center justify-center text-xl text-darkText group-hover:scale-110 transition-transform">
+                            🌿
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-darkText">Lifestyle & Moments</h3>
+                        <p class="text-mutedText text-sm leading-relaxed">
+                            Personal moments, lifestyle snippets, aesthetic desk setups, occasional appearance/life updates, and quiet routine reflections.
+                        </p>
+                        <div class="pt-2 flex flex-wrap gap-1.5">
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelBlue/30 text-[11px] font-medium text-darkText">Desk Setup</span>
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelBlue/30 text-[11px] font-medium text-darkText">Life Updates</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 4: Storytelling -->
+                    <div class="group bg-cardWhite rounded-3xl p-6 border border-pastelGreen/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 space-y-4">
+                        <div class="w-12 h-12 rounded-2xl bg-pastelGreen/60 flex items-center justify-center text-xl text-darkText group-hover:scale-110 transition-transform">
+                            🎬
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-darkText">Storytelling</h3>
+                        <p class="text-mutedText text-sm leading-relaxed">
+                            Personal narratives, creative observations, deep thoughts, narrative voiceovers, and story-driven video concepts.
+                        </p>
+                        <div class="pt-2 flex flex-wrap gap-1.5">
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelGreen/30 text-[11px] font-medium text-darkText">Voiceovers</span>
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelGreen/30 text-[11px] font-medium text-darkText">Written Stories</span>
+                        </div>
+                    </div>
+
+                    <!-- Card 5: Creative Content -->
+                    <div class="group bg-cardWhite rounded-3xl p-6 border border-pastelBlue/60 shadow-sm hover:shadow-md transition-all duration-300 hover:-translate-y-1 space-y-4 sm:col-span-2 lg:col-span-2">
+                        <div class="w-12 h-12 rounded-2xl bg-pastelBlue/60 flex items-center justify-center text-xl text-darkText group-hover:scale-110 transition-transform">
+                            🎨
+                        </div>
+                        <h3 class="text-xl font-serif font-bold text-darkText">Creative Visuals & Editing</h3>
+                        <p class="text-mutedText text-sm leading-relaxed">
+                            Visual storytelling, aesthetic edits, thumbnail design, experimental video concepts, creative writing, and campaign visuals tailored for young audiences.
+                        </p>
+                        <div class="pt-2 flex flex-wrap gap-1.5">
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelBlue/30 text-[11px] font-medium text-darkText">Thumbnail Design</span>
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelBlue/30 text-[11px] font-medium text-darkText">Aesthetic Edits</span>
+                            <span class="px-2.5 py-0.5 rounded-md bg-pastelBlue/30 text-[11px] font-medium text-darkText">Campaign Concepts</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SOCIAL MEDIA PLATFORMS SECTION -->
+        <section id="socials" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-pastelBlue/20 rounded-3xl p-6 sm:p-10 border border-pastelBlue/50 space-y-8">
+                <!-- Header -->
+                <div class="text-center space-y-2">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-cardWhite text-darkText text-xs font-semibold uppercase tracking-wider shadow-sm">
+                        <span>✦ Little Corners Of The Internet</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">Find Me Around The Web</h2>
+                    <p class="text-mutedText text-sm sm:text-base">Connect with me on my active social platforms.</p>
+                </div>
+
+                <!-- 4 Social Platform Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+                    
+                    <!-- Instagram -->
+                    <a href="https://www.instagram.com/shahu.noir/?__pwa=1#" target="_blank" rel="noopener noreferrer" class="bg-cardWhite rounded-2xl p-5 border border-pastelBlue/60 hover:border-pink-300 transition-all hover:-translate-y-1 shadow-sm flex flex-col justify-between space-y-4 group">
+                        <div class="flex items-center justify-between">
+                            <div class="p-2.5 rounded-xl bg-pink-50 text-pink-500">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </div>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-pink-50 text-pink-600">Instagram</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-darkText text-base group-hover:text-pink-600 transition-colors">shahu.noir</h3>
+                            <p class="text-xs text-mutedText mt-1">Study vlogs, reels, and daily aesthetic updates.</p>
+                        </div>
+                        <div class="text-xs font-medium text-accentBlue flex items-center gap-1 pt-2">
+                            <span>Visit Profile</span>
+                            <span>→</span>
+                        </div>
+                    </a>
+
+                    <!-- YouTube -->
+                    <a href="https://youtube/@shahunoirlife?si=XOBlMaDoVt8_n7h6" target="_blank" rel="noopener noreferrer" class="bg-cardWhite rounded-2xl p-5 border border-pastelBlue/60 hover:border-red-300 transition-all hover:-translate-y-1 shadow-sm flex flex-col justify-between space-y-4 group">
+                        <div class="flex items-center justify-between">
+                            <div class="p-2.5 rounded-xl bg-red-50 text-red-500">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </div>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-red-50 text-red-600">YouTube</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-darkText text-base group-hover:text-red-600 transition-colors">ShahuNoirlife</h3>
+                            <p class="text-xs text-mutedText mt-1">Realistic study vlogs and narrative storytelling.</p>
+                        </div>
+                        <div class="text-xs font-medium text-accentBlue flex items-center gap-1 pt-2">
+                            <span>Watch Vlogs</span>
+                            <span>→</span>
+                        </div>
+                    </a>
+
+                    <!-- TikTok -->
+                    <a href="https://tiktok.com/@shahu.noir" target="_blank" rel="noopener noreferrer" class="bg-cardWhite rounded-2xl p-5 border border-pastelBlue/60 hover:border-gray-400 transition-all hover:-translate-y-1 shadow-sm flex flex-col justify-between space-y-4 group">
+                        <div class="flex items-center justify-between">
+                            <div class="p-2.5 rounded-xl bg-gray-100 text-darkText">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.56-1.29 1.54-1.25 2.52.02.83.42 1.64 1.09 2.11.83.6 1.94.73 2.91.41.97-.31 1.75-1.09 2.05-2.06.22-.72.23-1.48.23-2.23l-.01-14.73z"/></svg>
+                            </div>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-gray-100 text-darkText">TikTok</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-darkText text-base group-hover:text-black transition-colors">shahu.noir</h3>
+                            <p class="text-xs text-mutedText mt-1">Short relatable student clips & struggles.</p>
+                        </div>
+                        <div class="text-xs font-medium text-accentBlue flex items-center gap-1 pt-2">
+                            <span>Watch Shorts</span>
+                            <span>→</span>
+                        </div>
+                    </a>
+
+                    <!-- Facebook -->
+                    <a href="https://www.facebook.com/share/19dJL8LTxW/" target="_blank" rel="noopener noreferrer" class="bg-cardWhite rounded-2xl p-5 border border-pastelBlue/60 hover:border-blue-300 transition-all hover:-translate-y-1 shadow-sm flex flex-col justify-between space-y-4 group">
+                        <div class="flex items-center justify-between">
+                            <div class="p-2.5 rounded-xl bg-blue-50 text-blue-600">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                            </div>
+                            <span class="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-600">Facebook</span>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-darkText text-base group-hover:text-blue-600 transition-colors">Shahu Noir</h3>
+                            <p class="text-xs text-mutedText mt-1">Community posts and storytelling pieces.</p>
+                        </div>
+                        <div class="text-xs font-medium text-accentBlue flex items-center gap-1 pt-2">
+                            <span>Connect</span>
+                            <span>→</span>
+                        </div>
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED CONTENT / VIDEOS SECTION -->
+        <section id="featured" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-10">
+                <!-- Header -->
+                <div class="flex flex-col sm:flex-row sm:items-end justify-between gap-4">
+                    <div class="space-y-2">
+                        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pastelBlue/50 text-darkText text-xs font-semibold uppercase tracking-wider">
+                            <span>✦ Visual Portfolio</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">Featured Video Content</h2>
+                    </div>
+                    <p class="text-mutedText text-sm sm:text-base max-w-xs">A collection of my favorite and best-performing video stories.</p>
+                </div>
+
+                <!-- Video Grid Masonry Style -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    
+                    <!-- Video 1: Instagram Reel (Admission Journey) -->
+                    <div class="group bg-cardWhite rounded-3xl overflow-hidden border border-pastelBlue/60 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden aspect-[4/5] bg-pastelBlue/40">
+                            <img src="https://placehold.co/600x750/D0E8F2/2C4A52?text=Admission+Journey+Day+01" 
+                                 alt="Admission Journey Day 01" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- Platform Tag -->
+                            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-cardWhite/90 backdrop-blur-md text-xs font-bold text-pink-600 shadow-sm flex items-center gap-1">
+                                <span>✦ Instagram Reel</span>
+                            </div>
+
+                            <!-- Overlay Play Button -->
+                            <a href="https://www.instagram.com/reel/DcK47iIynm3/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="absolute inset-0 bg-darkText/20 group-hover:bg-darkText/40 transition-colors flex items-center justify-center">
+                                <div class="w-14 h-14 rounded-full bg-cardWhite/90 text-darkText flex items-center justify-center pl-1 group-hover:scale-110 transition-transform shadow-lg">
+                                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="p-5 space-y-2">
+                            <h3 class="font-serif font-bold text-lg text-darkText group-hover:text-accentBlue transition-colors">Admission Journey Day 01</h3>
+                            <p class="text-xs text-mutedText leading-relaxed">Documenting day 01 of the intense university admission journey, realistic routine, and study mindset.</p>
+                            <div class="pt-2">
+                                <a href="https://www.instagram.com/reel/DcK47iIynm3/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-accentBlue hover:underline inline-flex items-center gap-1">
+                                    Watch on Instagram ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 2: YouTube Vlog (Realistic Study Vlog) -->
+                    <div class="group bg-cardWhite rounded-3xl overflow-hidden border border-pastelGreen/60 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden aspect-[4/5] bg-pastelGreen/40">
+                            <img src="https://placehold.co/600x750/DDF3E4/2C4A52?text=Realistic+Study+Vlog" 
+                                 alt="Realistic Study Vlog" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- Platform Tag -->
+                            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-cardWhite/90 backdrop-blur-md text-xs font-bold text-red-600 shadow-sm flex items-center gap-1">
+                                <span>✦ YouTube Vlog</span>
+                            </div>
+
+                            <!-- Overlay Play Button -->
+                            <a href="https://youtu.be/bSzXtK8_lI8?si=7QOrp-7Em9C1CB0h" target="_blank" rel="noopener noreferrer" class="absolute inset-0 bg-darkText/20 group-hover:bg-darkText/40 transition-colors flex items-center justify-center">
+                                <div class="w-14 h-14 rounded-full bg-cardWhite/90 text-darkText flex items-center justify-center pl-1 group-hover:scale-110 transition-transform shadow-lg">
+                                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="p-5 space-y-2">
+                            <h3 class="font-serif font-bold text-lg text-darkText group-hover:text-accentGreen transition-colors">Realistic Study Vlog</h3>
+                            <p class="text-xs text-mutedText leading-relaxed">An unedited, honest study vlog depicting study hours, quiet moments, and overcoming burnout.</p>
+                            <div class="pt-2">
+                                <a href="https://youtu.be/bSzXtK8_lI8?si=7QOrp-7Em9C1CB0h" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-accentGreen hover:underline inline-flex items-center gap-1">
+                                    Watch Full Vlog ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video 3: TikTok (Relatable Student Life) -->
+                    <div class="group bg-cardWhite rounded-3xl overflow-hidden border border-pastelBlue/60 shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between">
+                        <div class="relative overflow-hidden aspect-[4/5] bg-pastelBlue/40">
+                            <img src="https://placehold.co/600x750/D0E8F2/2C4A52?text=Relatable+Student+Life" 
+                                 alt="Relatable Student Life" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            
+                            <!-- Platform Tag -->
+                            <div class="absolute top-4 left-4 px-3 py-1 rounded-full bg-cardWhite/90 backdrop-blur-md text-xs font-bold text-darkText shadow-sm flex items-center gap-1">
+                                <span>✦ TikTok Clip</span>
+                            </div>
+
+                            <!-- Overlay Play Button -->
+                            <a href="https://www.tiktok.com/@shahu.noir/video/7671312493381209362?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="absolute inset-0 bg-darkText/20 group-hover:bg-darkText/40 transition-colors flex items-center justify-center">
+                                <div class="w-14 h-14 rounded-full bg-cardWhite/90 text-darkText flex items-center justify-center pl-1 group-hover:scale-110 transition-transform shadow-lg">
+                                    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                                </div>
+                            </a>
+                        </div>
+                        
+                        <div class="p-5 space-y-2">
+                            <h3 class="font-serif font-bold text-lg text-darkText group-hover:text-accentBlue transition-colors">Relatable Student Life</h3>
+                            <p class="text-xs text-mutedText leading-relaxed">Short, relatable video capturing the daily comedic and emotional struggles of student life.</p>
+                            <div class="pt-2">
+                                <a href="https://www.tiktok.com/@shahu.noir/video/7671312493381209362?is_from_webapp=1&sender_device=pc" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-accentBlue hover:underline inline-flex items-center gap-1">
+                                    Watch on TikTok ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PORTFOLIO & CREATIVE WORK SHOWCASE WITH LIGHTBOX -->
+        <section id="portfolio" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-10">
+                <!-- Header -->
+                <div class="text-center space-y-2">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pastelGreen/50 text-darkText text-xs font-semibold uppercase tracking-wider">
+                        <span>✦ Creative Toolbox & Visuals</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">Thumbnails & Visual Work</h2>
+                    <p class="text-mutedText max-w-xl mx-auto text-sm sm:text-base">Custom post edits, thumbnail designs, writing pieces, and team moments.</p>
+                </div>
+
+                <!-- Showcase Cards Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Showcase Item 1: Thumbnail Design -->
+                    <div class="group bg-cardWhite rounded-3xl p-4 border border-pastelBlue/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[16/9] bg-pastelBlue/30 cursor-pointer" onclick="openLightbox('Thumbnail Design', 'Custom youtube thumbnail edit for study sessions.', 'https://scontent.fdac3-1.fna.fbcdn.net/v/t39.30808-6/791755669_122095686903470216_1568217479698018233_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x720&ctp=s1280x720&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHN44_uNeEoI47f1P4jAdcMYHwFMAbGu6FgfAUwBsa7oYKxus2Y2p0N1Lll7Fo7z-Or-jh5ZfcebKq8N0oxT4i6&_nc_ohc=FDHZv2kuVukQ7kNvwHTNzt-&_nc_oc=AdoOQuRtyalDZOuo2E8ufTHRi4pYzyDXwifDIFBBPD08mm_-gD_ut2QM_rOw-P2IlLg&_nc_zt=23&_nc_ht=scontent.fdac3-1.fna&_nc_gid=pph5GQUIVZ_rmQ4ps5qP4Q&_nc_ss=7b2a8&oh=00_AQKB9GYW-bvTtA4grCKTBjhjEkj8L_S8srIsTPkRB2F6PA&oe=6AADB040')">
+                            <img src="https://scontent.fdac3-1.fna.fbcdn.net/v/t39.30808-6/791755669_122095686903470216_1568217479698018233_n.jpg?stp=dst-jpg_tt6&cstp=mx1280x720&ctp=s1280x720&_nc_cat=108&ccb=1-7&_nc_sid=833d8c&_nc_eui2=AeHN44_uNeEoI47f1P4jAdcMYHwFMAbGu6FgfAUwBsa7oYKxus2Y2p0N1Lll7Fo7z-Or-jh5ZfcebKq8N0oxT4i6&_nc_ohc=FDHZv2kuVukQ7kNvwHTNzt-&_nc_oc=AdoOQuRtyalDZOuo2E8ufTHRi4pYzyDXwifDIFBBPD08mm_-gD_ut2QM_rOw-P2IlLg&_nc_zt=23&_nc_ht=scontent.fdac3-1.fna&_nc_gid=pph5GQUIVZ_rmQ4ps5qP4Q&_nc_ss=7b2a8&oh=00_AQKB9GYW-bvTtA4grCKTBjhjEkj8L_S8srIsTPkRB2F6PA&oe=6AADB040" 
+                                 alt="Thumbnail Design" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                 onerror="this.onerror=null; this.src='https://placehold.co/1280x720/D0E8F2/2C4A52?text=Thumbnail+Design+Portfolio';">
+                            <div class="absolute inset-0 bg-darkText/0 group-hover:bg-darkText/20 transition-colors flex items-center justify-center">
+                                <span class="opacity-0 group-hover:opacity-100 bg-cardWhite/90 text-darkText text-xs font-semibold px-3 py-1.5 rounded-full shadow-md transition-opacity">Click to Expand 🔍</span>
+                            </div>
+                        </div>
+                        <div class="pt-4 space-y-1">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-semibold text-accentBlue uppercase">Visual Edit</span>
+                                <span class="text-[11px] text-mutedText">Thumbnail</span>
+                            </div>
+                            <h3 class="font-bold text-darkText text-base">Thumbnail Design Work</h3>
+                            <p class="text-xs text-mutedText">High-CTR graphic and video cover design created for content projects.</p>
+                        </div>
+                    </div>
+
+                    <!-- Showcase Item 2: Storytelling Visual / Wattpad Work -->
+                    <div class="group bg-cardWhite rounded-3xl p-4 border border-pastelGreen/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[16/9] bg-pastelGreen/30">
+                            <img src="https://placehold.co/1280x720/DDF3E4/2C4A52?text=Echoes+Of+Vengeance+Wattpad" 
+                                 alt="Echoes Of Vengeance" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="pt-4 space-y-1">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-semibold text-accentGreen uppercase">Creative Writing</span>
+                                <span class="text-[11px] text-mutedText">Wattpad Series</span>
+                            </div>
+                            <h3 class="font-bold text-darkText text-base">Echoes Of Vengeance</h3>
+                            <p class="text-xs text-mutedText">Original fictional storytelling story created and written by Shahanaj Jim.</p>
+                            <div class="pt-2">
+                                <a href="https://www.wattpad.com" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-accentGreen hover:underline inline-flex items-center gap-1">
+                                    Read on Wattpad ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Showcase Item 3: Team Meetup -->
+                    <div class="group bg-cardWhite rounded-3xl p-4 border border-pastelBlue/60 shadow-sm hover:shadow-md transition-all flex flex-col justify-between">
+                        <div class="relative overflow-hidden rounded-2xl aspect-[16/9] bg-pastelBlue/30">
+                            <img src="https://placehold.co/1280x720/D0E8F2/2C4A52?text=Team+Meetup+Photo" 
+                                 alt="Team Meetup" 
+                                 class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="pt-4 space-y-1">
+                            <div class="flex items-center justify-between">
+                                <span class="text-[11px] font-semibold text-accentBlue uppercase">Community</span>
+                                <span class="text-[11px] text-mutedText">Event</span>
+                            </div>
+                            <h3 class="font-bold text-darkText text-base">Team Meetup & Collaboration</h3>
+                            <p class="text-xs text-mutedText">Gathering with team members and community leaders for strategic planning.</p>
+                            <div class="pt-2">
+                                <a href="https://www.instagram.com/p/DMvOg1mvCLf/?utm_source=ig_web_copy_link&stkn=MzRlODBiNWFlZA==" target="_blank" rel="noopener noreferrer" class="text-xs font-semibold text-accentBlue hover:underline inline-flex items-center gap-1">
+                                    View Post ↗
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- WHY WORK WITH ME SECTION -->
+        <section id="why-me" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-10">
+                <!-- Header -->
+                <div class="text-center space-y-2">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pastelBlue/50 text-darkText text-xs font-semibold uppercase tracking-wider">
+                        <span>✦ Brand Partnership Value</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">Why Collaborate With Me?</h2>
+                    <p class="text-mutedText max-w-xl mx-auto text-sm sm:text-base">Bringing genuine student trust, storytelling quality, and reliability to brand partnerships.</p>
+                </div>
+
+                <!-- 6 Value Proposition Cards Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- Value 1 -->
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelBlue/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelBlue/50 text-accentBlue flex items-center justify-center font-bold text-lg">
+                            ✦
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-darkText">Authentic & Unfiltered Content</h3>
+                        <p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+                            I focus on realistic and relatable student life instead of artificial perfection. Audiences trust my recommendations because they see the real work behind it.
+                        </p>
+                    </div>
+
+                    <!-- Value 2 -->
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelGreen/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelGreen/50 text-accentGreen flex items-center justify-center font-bold text-lg">
+                            🎓
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-darkText">Direct Student Audience</h3>
+                        <p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+                            My content naturally connects with students, examinees, and ambitious young adults actively seeking study tools, stationery, productivity apps, and advice.
+                        </p>
+                    </div>
+
+                    <!-- Value 3 -->
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelBlue/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelBlue/50 text-accentBlue flex items-center justify-center font-bold text-lg">
+                            📖
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-darkText">Narrative Storytelling</h3>
+                        <p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+                            I turn ordinary brand messages or products into organic, story-driven moments that feel like natural parts of a student's daily routine.
+                        </p>
+                    </div>
+
+                    <!-- Value 4 -->
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelGreen/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelGreen/50 text-accentGreen flex items-center justify-center font-bold text-lg">
+                            🎨
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-darkText">Creative Vision & Editing</h3>
+                        <p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+                            With experience in thumbnail creation, visual editing, and narrative writing, I bring high visual standards and creative editing concepts to every campaign.
+                        </p>
+                    </div>
+
+                    <!-- Value 5 -->
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelBlue/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelBlue/50 text-accentBlue flex items-center justify-center font-bold text-lg">
+                            💬
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-darkText">Professional Communication</h3>
+                        <p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+                            Having served as a social media executive and junior marketing executive, I understand brand briefs, deadlines, clear communication, and campaign objectives.
+                        </p>
+                    </div>
+
+                    <!-- Value 6 -->
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelGreen/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelGreen/50 text-accentGreen flex items-center justify-center font-bold text-lg">
+                            🌱
+                        </div>
+                        <h3 class="text-lg font-serif font-bold text-darkText">Adaptability & Consistency</h3>
+                        <p class="text-xs sm:text-sm text-mutedText leading-relaxed">
+                            I seamlessly adapt campaign goals to fit my audience without compromising on content authenticity or quality.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CREATIVE TOOLBOX / SKILLS SECTION -->
+        <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-pastelGreen/20 rounded-3xl p-6 sm:p-10 border border-pastelGreen/50 space-y-8">
+                <!-- Header -->
+                <div class="text-center space-y-2">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-cardWhite text-darkText text-xs font-semibold uppercase tracking-wider shadow-sm">
+                        <span>✦ Skills & Expertise</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">My Creative Toolbox</h2>
+                    <p class="text-mutedText text-sm sm:text-base">The skills and tools I use to bring ideas to life.</p>
+                </div>
+
+                <!-- Skill Tag Pills -->
+                <div class="flex flex-wrap justify-center gap-3 max-w-4xl mx-auto">
+                    <div class="px-4 py-2 rounded-2xl bg-cardWhite border border-pastelGreen/80 text-darkText font-medium text-xs sm:text-sm shadow-sm flex items-center gap-2 hover:bg-pastelGreenLight transition-colors">
+                        <span>🎬</span> Video Editing
+                    </div>
+                    <div class="px-4 py-2 rounded-2xl bg-cardWhite border border-pastelBlue/80 text-darkText font-medium text-xs sm:text-sm shadow-sm flex items-center gap-2 hover:bg-pastelBlueLight transition-colors">
+                        <span>📱</span> Content Creation
+                    </div>
+                    <div class="px-4 py-2 rounded-2xl bg-cardWhite border border-pastelGreen/80 text-darkText font-medium text-xs sm:text-sm shadow-sm flex items-center gap-2 hover:bg-pastelGreenLight transition-colors">
+                        <span>📖</span> Storytelling & Writing
+                    </div>
+                    <div class="px-4 py-2 rounded-2xl bg-cardWhite border border-pastelBlue/80 text-darkText font-medium text-xs sm:text-sm shadow-sm flex items-center gap-2 hover:bg-pastelBlueLight transition-colors">
+                        <span>🖼</span> Thumbnail & Visual Design
+                    </div>
+                    <div class="px-4 py-2 rounded-2xl bg-cardWhite border border-pastelGreen/80 text-darkText font-medium text-xs sm:text-sm shadow-sm flex items-center gap-2 hover:bg-pastelGreenLight transition-colors">
+                        <span>📊</span> Content Strategy & Planning
+                    </div>
+                    <div class="px-4 py-2 rounded-2xl bg-cardWhite border border-pastelBlue/80 text-darkText font-medium text-xs sm:text-sm shadow-sm flex items-center gap-2 hover:bg-pastelBlueLight transition-colors">
+                        <span>🤝</span> Community Moderation
+                    </div>
+                    <div class="px-4 py-2 rounded-2xl bg-cardWhite border border-pastelGreen/80 text-darkText font-medium text-xs sm:text-sm shadow-sm flex items-center gap-2 hover:bg-pastelGreenLight transition-colors">
+                        <span>💡</span> Creative Concept Development
+                    </div>
+                    <div class="px-4 py-2 rounded-2xl bg-cardWhite border border-pastelBlue/80 text-darkText font-medium text-xs sm:text-sm shadow-sm flex items-center gap-2 hover:bg-pastelBlueLight transition-colors">
+                        <span>💬</span> Social Media Management
+                    </div>
+                    <div class="px-4 py-2 rounded-2xl bg-cardWhite border border-pastelGreen/80 text-darkText font-medium text-xs sm:text-sm shadow-sm flex items-center gap-2 hover:bg-pastelGreenLight transition-colors">
+                        <span>🗣</span> Brand Communication
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EXPERIENCE & COMMUNITY HIGHLIGHT SECTION -->
+        <section id="experience" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+                
+                <!-- Experience Timeline Column -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="space-y-2">
+                        <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pastelBlue/50 text-darkText text-xs font-semibold uppercase tracking-wider">
+                            <span>✦ Professional Path</span>
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">Experience Journey</h2>
+                    </div>
+
+                    <!-- Timeline Item 1: Lobdhi -->
+                    <div class="relative pl-6 border-l-2 border-accentBlue/40 space-y-2 pb-6">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accentBlue border-2 border-white"></div>
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <h3 class="text-lg font-bold text-darkText">Lobdhi</h3>
+                            <span class="px-2.5 py-0.5 rounded-full bg-pastelBlue/60 text-darkText text-xs font-semibold">Currently Working Here</span>
+                        </div>
+                        <p class="text-sm font-semibold text-accentBlue">Social Media Executive</p>
+                        <p class="text-xs text-mutedText leading-relaxed">Managing social media visual presence, post strategies, community engagement, and brand communication.</p>
+                    </div>
+
+                    <!-- Timeline Item 2: Apar's Classroom -->
+                    <div class="relative pl-6 border-l-2 border-accentGreen/40 space-y-2 pb-6">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accentGreen border-2 border-white"></div>
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <h3 class="text-lg font-bold text-darkText">Apar's Classroom</h3>
+                            <span class="px-2.5 py-0.5 rounded-full bg-pastelGreen/60 text-darkText text-xs font-semibold">Community Role</span>
+                        </div>
+                        <p class="text-sm font-semibold text-accentGreen">Moderator / Community Experience</p>
+                        <p class="text-xs text-mutedText leading-relaxed">Overseeing student queries, maintaining community guidelines, and facilitating student discussions in a large educational community.</p>
+                    </div>
+
+                    <!-- Timeline Item 3: Reach Savvy -->
+                    <div class="relative pl-6 border-l-2 border-accentBlue/40 space-y-2">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-accentBlue border-2 border-white"></div>
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <h3 class="text-lg font-bold text-darkText">Reach Savvy</h3>
+                            <span class="px-2.5 py-0.5 rounded-full bg-pastelBlue/60 text-darkText text-xs font-semibold">Marketing Role</span>
+                        </div>
+                        <p class="text-sm font-semibold text-accentBlue">Junior Marketing Executive</p>
+                        <p class="text-xs text-mutedText leading-relaxed">Assisted with marketing campaigns, brand research, content ideation, and outreach strategy execution.</p>
+                    </div>
+                </div>
+
+                <!-- Community Highlight Stats Box -->
+                <div class="lg:col-span-5 flex flex-col justify-center">
+                    <div class="bg-cardWhite rounded-3xl p-6 sm:p-8 border border-pastelGreen/80 shadow-sm space-y-6 relative overflow-hidden">
+                        <div class="space-y-2">
+                            <span class="px-3 py-1 rounded-full bg-pastelGreen/50 text-xs font-semibold text-darkText">Highlight</span>
+                            <h3 class="text-2xl font-serif font-bold text-darkText">Community & Moderation Impact</h3>
+                            <p class="text-xs text-mutedText">Community leadership and moderation experience highlight metrics.</p>
+                        </div>
+
+                        <!-- Editable Stat Placeholders Grid -->
+                        <div class="grid grid-cols-2 gap-4 pt-2">
+                            <div class="p-4 rounded-2xl bg-pastelGreen/20 border border-pastelGreen/40 text-center space-y-1">
+                                <span class="text-2xl sm:text-3xl font-serif font-bold text-darkText">900K+</span>
+                                <p class="text-[11px] font-medium text-mutedText uppercase">Community Members</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-pastelBlue/20 border border-pastelBlue/40 text-center space-y-1">
+                                <span class="text-2xl sm:text-3xl font-serif font-bold text-darkText">50+</span>
+                                <p class="text-[11px] font-medium text-mutedText uppercase">Events & Drives</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-pastelBlue/20 border border-pastelBlue/40 text-center space-y-1">
+                                <span class="text-2xl sm:text-3xl font-serif font-bold text-darkText">100+</span>
+                                <p class="text-[11px] font-medium text-mutedText uppercase">Mods & Leaders</p>
+                            </div>
+                            <div class="p-4 rounded-2xl bg-pastelGreen/20 border border-pastelGreen/40 text-center space-y-1">
+                                <span class="text-2xl sm:text-3xl font-serif font-bold text-darkText">Active</span>
+                                <p class="text-[11px] font-medium text-mutedText uppercase">Engagement</p>
+                            </div>
+                        </div>
+
+                        <p class="text-xs text-mutedText italic text-center">
+                            "Building respectful, structured, and engaged student communities."
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- SERVICES & BRAND FIT SECTION -->
+        <section id="services" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-10">
+                <!-- Header -->
+                <div class="text-center space-y-2">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pastelGreen/50 text-darkText text-xs font-semibold uppercase tracking-wider">
+                        <span>✦ Collaboration Offerings</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">Services & Brand Fit</h2>
+                    <p class="text-mutedText max-w-xl mx-auto text-sm sm:text-base">How we can work together to create meaningful brand stories.</p>
+                </div>
+
+                <!-- 4 Collaboration Services Cards -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelBlue/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelBlue/50 text-accentBlue flex items-center justify-center font-bold text-lg">
+                            📱
+                        </div>
+                        <h3 class="font-serif font-bold text-base text-darkText">Sponsored Content</h3>
+                        <p class="text-xs text-mutedText leading-relaxed">Dedicated or integrated Instagram Reels, TikTok Shorts, and YouTube vlogs featuring your brand organically.</p>
+                    </div>
+
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelGreen/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelGreen/50 text-accentGreen flex items-center justify-center font-bold text-lg">
+                            🎥
+                        </div>
+                        <h3 class="font-serif font-bold text-base text-darkText">UGC Video Creation</h3>
+                        <p class="text-xs text-mutedText leading-relaxed">Authentic user-generated videos tailored for your brand's official ad campaigns and social channels.</p>
+                    </div>
+
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelBlue/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelBlue/50 text-accentBlue flex items-center justify-center font-bold text-lg">
+                            ✍
+                        </div>
+                        <h3 class="font-serif font-bold text-base text-darkText">Storytelling Campaigns</h3>
+                        <p class="text-xs text-mutedText leading-relaxed">Narrative-driven visual posts, storytelling videos, and written feature reviews.</p>
+                    </div>
+
+                    <div class="bg-cardWhite rounded-3xl p-6 border border-pastelGreen/60 shadow-sm space-y-3">
+                        <div class="w-10 h-10 rounded-xl bg-pastelGreen/50 text-accentGreen flex items-center justify-center font-bold text-lg">
+                            💡
+                        </div>
+                        <h3 class="font-serif font-bold text-base text-darkText">Custom Concept Ideation</h3>
+                        <p class="text-xs text-mutedText leading-relaxed">Tailored campaign concepts designed specifically for student and youth demographic reach.</p>
+                    </div>
+                </div>
+
+                <!-- Brand Fit Tags Grid -->
+                <div class="bg-pastelBlue/20 rounded-3xl p-6 sm:p-8 border border-pastelBlue/40 space-y-4">
+                    <h3 class="text-center text-lg font-serif font-bold text-darkText">Brands That Naturally Fit My Content</h3>
+                    <div class="flex flex-wrap justify-center gap-2">
+                        <span class="px-3 py-1.5 rounded-full bg-cardWhite border border-pastelBlue text-xs text-darkText font-medium">📚 Education & EdTech</span>
+                        <span class="px-3 py-1.5 rounded-full bg-cardWhite border border-pastelGreen text-xs text-darkText font-medium">✏️ Stationery & Planners</span>
+                        <span class="px-3 py-1.5 rounded-full bg-cardWhite border border-pastelBlue text-xs text-darkText font-medium">📖 Books & Publishing</span>
+                        <span class="px-3 py-1.5 rounded-full bg-cardWhite border border-pastelGreen text-xs text-darkText font-medium">💻 Productivity Apps & Tech</span>
+                        <span class="px-3 py-1.5 rounded-full bg-cardWhite border border-pastelBlue text-xs text-darkText font-medium">🌿 Student Lifestyle</span>
+                        <span class="px-3 py-1.5 rounded-full bg-cardWhite border border-pastelGreen text-xs text-darkText font-medium">🎒 Fashion & Desk Setup</span>
+                    </div>
+                    <p class="text-center text-xs text-mutedText pt-1">✦ Open to discussing custom collaborations with brands that fit my audience values.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PERSONAL SCRAPBOOK PHOTO GALLERY -->
+        <section id="gallery" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="space-y-10">
+                <!-- Header -->
+                <div class="text-center space-y-2">
+                    <div class="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-pastelBlue/50 text-darkText text-xs font-semibold uppercase tracking-wider">
+                        <span>✦ Digital Scrapbook</span>
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-serif font-bold text-darkText">Moments & Memories</h2>
+                    <p class="text-mutedText max-w-xl mx-auto text-sm sm:text-base">A little look behind the scenes of my everyday life.</p>
+                </div>
+
+                <!-- Scrapbook Polaroid Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 pt-4">
+                    
+                    <!-- Polaroid 1 -->
+                    <div class="polaroid tape-effect rounded-2xl transform -rotate-2 hover:rotate-0">
+                        <div class="aspect-[4/5] bg-pastelBlue/30 rounded-xl overflow-hidden">
+                            <img src="https://placehold.co/500x625/D0E8F2/2C4A52?text=Study+Moments" 
+                                 alt="Study Moments" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <span class="font-handwritten text-xl text-darkText font-bold">Late Night Studies 📖</span>
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 2 -->
+                    <div class="polaroid tape-effect rounded-2xl transform rotate-2 hover:rotate-0">
+                        <div class="aspect-[4/5] bg-pastelGreen/30 rounded-xl overflow-hidden">
+                            <img src="https://placehold.co/500x625/DDF3E4/2C4A52?text=Desk+Setup" 
+                                 alt="Desk Setup" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <span class="font-handwritten text-xl text-darkText font-bold">My Creative Corner ☁</span>
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 3 -->
+                    <div class="polaroid tape-effect rounded-2xl transform -rotate-1 hover:rotate-0">
+                        <div class="aspect-[4/5] bg-pastelBlue/30 rounded-xl overflow-hidden">
+                            <img src="https://placehold.co/500x625/D0E8F2/2C4A52?text=Writing+Journals" 
+                                 alt="Writing Journals" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <span class="font-handwritten text-xl text-darkText font-bold">Thoughts & Words ✍</span>
+                        </div>
+                    </div>
+
+                    <!-- Polaroid 4 -->
+                    <div class="polaroid tape-effect rounded-2xl transform rotate-3 hover:rotate-0">
+                        <div class="aspect-[4/5] bg-pastelGreen/30 rounded-xl overflow-hidden">
+                            <img src="https://placehold.co/500x625/DDF3E4/2C4A52?text=Everyday+Small+Wins" 
+                                 alt="Everyday Small Wins" 
+                                 class="w-full h-full object-cover">
+                        </div>
+                        <div class="mt-3 text-center">
+                            <span class="font-handwritten text-xl text-darkText font-bold">Little Moments ♡</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT & COLLABORATION CTA SECTION -->
+        <section id="contact" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-gradient-to-br from-pastelBlue/40 via-pastelGreen/30 to-creamBg rounded-3xl p-8 sm:p-14 border border-pastelBlue/80 shadow-md text-center space-y-8 relative overflow-hidden">
+                
+                <!-- Celestial Icon Header -->
+                <div class="w-16 h-16 rounded-3xl bg-cardWhite/80 mx-auto flex items-center justify-center text-accentBlue text-2xl shadow-sm border border-white">
+                    ✦
+                </div>
+
+                <div class="max-w-2xl mx-auto space-y-3">
+                    <h2 class="text-3xl sm:text-5xl font-serif font-bold text-darkText leading-tight">
+                        Have an idea? Let's make something worth remembering.
+                    </h2>
+                    <p class="text-mutedText text-sm sm:text-base">
+                        Open for brand sponsorships, UGC campaigns, creative visual projects, and PR opportunities.
+                    </p>
+                </div>
+
+                <!-- Contact Details Pill Cards -->
+                <div class="flex flex-wrap justify-center gap-4 pt-2">
+                    <a href="mailto:shahunoir@gmail.com" class="px-6 py-3.5 rounded-2xl bg-cardWhite hover:bg-pastelBlueLight text-darkText font-semibold text-sm shadow-sm border border-pastelBlue flex items-center gap-2 transition-all hover:scale-105">
+                        <svg class="w-5 h-5 text-accentBlue" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                        <span>shahunoir@gmail.com</span>
+                    </a>
+
+                    <a href="https://www.instagram.com/shahu.noir/?__pwa=1#" target="_blank" rel="noopener noreferrer" class="px-6 py-3.5 rounded-2xl bg-cardWhite hover:bg-pastelBlueLight text-darkText font-semibold text-sm shadow-sm border border-pastelBlue flex items-center gap-2 transition-all hover:scale-105">
+                        <svg class="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        <span>DM on Instagram</span>
+                    </a>
+                </div>
+
+                <div class="pt-4">
+                    <button onclick="toggleInquiryForm()" class="px-8 py-3.5 rounded-full bg-pastelGreen text-darkText font-semibold text-sm hover:bg-accentGreen hover:text-white transition-all shadow-md">
+                        Send Collaboration Inquiry ✦
+                    </button>
+                </div>
+
+                <!-- Hidden Inquiry Form Modal / Drawer -->
+                <div id="inquiryForm" class="hidden max-w-xl mx-auto pt-6 text-left border-t border-accentGreen/20">
+                    <form onsubmit="handleFormSubmit(event)" class="space-y-4 bg-cardWhite p-6 rounded-2xl shadow-sm border border-pastelGreen/40">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-semibold text-darkText mb-1">Your Name / Brand</label>
+                                <input type="text" required placeholder="e.g. Brand Team" class="w-full px-3 py-2 rounded-xl bg-creamBg border border-pastelBlue/80 text-xs focus:outline-none focus:border-accentBlue">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-semibold text-darkText mb-1">Work Email</label>
+                                <input type="email" required placeholder="name@brand.com" class="w-full px-3 py-2 rounded-xl bg-creamBg border border-pastelBlue/80 text-xs focus:outline-none focus:border-accentBlue">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-darkText mb-1">Collaboration Type</label>
+                            <select class="w-full px-3 py-2 rounded-xl bg-creamBg border border-pastelBlue/80 text-xs focus:outline-none focus:border-accentBlue">
+                                <option>Sponsored Content / Reel</option>
+                                <option>UGC Video Creation</option>
+                                <option>Product Integration / Review</option>
+                                <option>Custom Creative Project</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-semibold text-darkText mb-1">Message / Campaign Details</label>
+                            <textarea rows="3" required placeholder="Tell me about your campaign objectives..." class="w-full px-3 py-2 rounded-xl bg-creamBg border border-pastelBlue/80 text-xs focus:outline-none focus:border-accentBlue"></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-2.5 rounded-xl bg-pastelGreen font-semibold text-darkText text-xs hover:bg-accentGreen hover:text-white transition-colors">
+                            Send Message
+                        </button>
+                        <p id="formStatus" class="hidden text-xs text-center font-medium text-accentGreen pt-1">
+                            Thank you! Your message inquiry prompt has been prepared.
+                        </p>
+                    </form>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- LIGHTBOX MODAL -->
+    <div id="lightbox" class="lightbox-modal fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-darkText/60 backdrop-blur-md">
+        <div class="relative bg-cardWhite rounded-3xl max-w-2xl w-full p-6 space-y-4 shadow-2xl border border-white">
+            <button onclick="closeLightbox()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-pastelBlue/40 text-darkText hover:bg-pastelBlue flex items-center justify-center font-bold text-lg">
+                ✕
+            </button>
+            <div class="rounded-2xl overflow-hidden max-h-[60vh] bg-pastelBlue/20">
+                <img id="lightboxImg" src="" alt="Preview" class="w-full h-full object-contain mx-auto">
+            </div>
+            <div>
+                <h3 id="lightboxTitle" class="text-xl font-serif font-bold text-darkText"></h3>
+                <p id="lightboxDesc" class="text-xs text-mutedText mt-1"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="border-t border-pastelBlue/40 bg-cardWhite/60 py-10 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+            <div class="flex items-center justify-center space-x-2">
+                <span class="font-serif font-bold text-lg text-darkText">Shahanaj Jim</span>
+                <span class="text-accentBlue">✦</span>
+                <span class="font-serif font-bold text-lg text-darkText">Shahu Noir</span>
+            </div>
+
+            <p class="font-handwritten text-xl text-mutedText">
+                "Study. Create. Document. Repeat."
+            </p>
+
+            <div class="flex justify-center space-x-4 text-xs text-mutedText pt-2">
+                <a href="#hero" class="hover:text-accentBlue">Back to Top ↑</a>
+                <span>•</span>
+                <a href="mailto:shahunoir@gmail.com" class="hover:text-accentBlue">shahunoir@gmail.com</a>
+            </div>
+
+            <p class="text-[11px] text-mutedText/70 pt-2">
+                © <span id="copyrightYear">2026</span> Shahanaj Jim (Shahu Noir). All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVE JAVASCRIPT -->
+    <script>
+        // Update copyright year dynamically
+        document.getElementById('copyrightYear').innerText = new Date().getFullYear();
+
+        // Mobile Menu Drawer Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileDrawer = document.getElementById('mobileDrawer');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileDrawer.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileDrawer.classList.add('hidden');
+            });
+        });
+
+        // Lightbox Functions
+        function openLightbox(title, desc, imgSrc) {
+            document.getElementById('lightboxTitle').innerText = title;
+            document.getElementById('lightboxDesc').innerText = desc;
+            document.getElementById('lightboxImg').src = imgSrc;
+            document.getElementById('lightbox').classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.add('hidden');
+        }
+
+        // Close Lightbox on Background Click
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+
+        // Toggle Inquiry Form
+        function toggleInquiryForm() {
+            const form = document.getElementById('inquiryForm');
+            form.classList.toggle('hidden');
+            if(!form.classList.contains('hidden')) {
+                form.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+
+        // Form Submit Handler
+        function handleFormSubmit(e) {
+            e.preventDefault();
+            const status = document.getElementById('formStatus');
+            status.classList.remove('hidden');
+            setTimeout(() => {
+                status.classList.add('hidden');
+                document.getElementById('inquiryForm').classList.add('hidden');
+            }, 3000);
+        }
+
+        // Navbar Scroll Shadow Effect
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 20) {
+                navbar.classList.add('shadow-sm');
+            } else {
+                navbar.classList.remove('shadow-sm');
+            }
+        });
+    </script>
+</body>
+</html>
